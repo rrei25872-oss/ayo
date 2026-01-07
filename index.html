@@ -41,7 +41,6 @@
         A scam is a dishonest scheme designed to trick people into giving
         away money, personal details, or access to accounts.
     </p>
-
     <div class="grid">
         <div class="card">
             <img src="scamaw.png" alt="Scam Example" class="card-img">
@@ -105,46 +104,54 @@
         Please answer the following questions to share your experience and thoughts about online scams.
     </p>
 
-    <form id="quizForm" action="https://formspree.io/f/mrebnpdp" method="POST" data-formspree-redirect="thankyou.html">
+    <form id="quizForm" action="https://formspree.io/f/mrebnpdp" method="POST">
+        <div class="card quiz-card">
+            <p><strong>Your Information:</strong></p>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="section" placeholder="Grade/Section" required>
+            <input type="number" name="age" placeholder="Age" required>
+        </div>
+
+        <!-- Quiz Questions -->
         <div class="card quiz-card">
             <p><strong>1. How often do you use the internet for school or personal purposes?</strong></p>
-            <textarea name="q1" placeholder="..." rows="3"></textarea>
+            <textarea name="q1" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>2. Have you ever encountered an online scam? If yes, can you describe your experience?</strong></p>
-            <textarea name="q2" placeholder="..." rows="3"></textarea>
+            <textarea name="q2" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>3. What types of online scams are you familiar with (e.g., phishing, fake links, fake online stores)?</strong></p>
-            <textarea name="q3" placeholder="..." rows="3"></textarea>
+            <textarea name="q3" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>4. How confident are you in identifying whether a website or message is a scam?</strong></p>
-            <textarea name="q4" placeholder="..." rows="3"></textarea>
+            <textarea name="q4" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>5. What signs do you usually look for to determine if something online is a scam?</strong></p>
-            <textarea name="q5" placeholder="..." rows="3"></textarea>
+            <textarea name="q5" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>6. Do you think students your age are vulnerable to online scams? Why or why not?</strong></p>
-            <textarea name="q6" placeholder="..." rows="3"></textarea>
+            <textarea name="q6" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>7. What information or lessons about online scams do you think students need most?</strong></p>
-            <textarea name="q7" placeholder="..." rows="3"></textarea>
+            <textarea name="q7" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>8. How can a website help students learn more effectively about scam awareness?</strong></p>
-            <textarea name="q8" placeholder="..." rows="3"></textarea>
+            <textarea name="q8" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>9. What features would you like to see in a scam-awareness website (e.g., examples, tips, quizzes)?</strong></p>
-            <textarea name="q9" placeholder="..." rows="3"></textarea>
+            <textarea name="q9" placeholder="..." rows="3" required></textarea>
         </div>
         <div class="card quiz-card">
             <p><strong>10. Do you believe a web-based platform can help reduce the risk of students falling for online scams? Why?</strong></p>
-            <textarea name="q10" placeholder="..." rows="3"></textarea>
+            <textarea name="q10" placeholder="..." rows="3" required></textarea>
         </div>
 
         <button type="submit" class="btn" style="margin-top: 20px;">Submit All Answers</button>
@@ -152,7 +159,7 @@
 </section>
 
 <section id="resources" class="content-section fade">
-    <h2>🇵🇭 Philippine Anti Scam Resources</h2>
+    <h2>🇵🇭 Philippine Anti-Scam Resources</h2>
     <div class="grid">
         <a class="card link-card" href="https://acg.pnp.gov.ph/" target="_blank">PNP Anti-Cybercrime Group</a>
         <a class="card link-card" href="https://nbi.gov.ph/" target="_blank">NBI Cybercrime Division</a>
@@ -161,9 +168,9 @@
 </section>
 
 <footer>
-    <p>©AntiScam Awareness | Stay Alert, Stay Safe</p>
+    <p>©Anti-Scam Awareness | Stay Alert, Stay Safe</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
-    </html>
+</html>

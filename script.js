@@ -4,30 +4,26 @@ document.addEventListener("DOMContentLoaded", function() {
     quizForm.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const textareas = quizForm.querySelectorAll("textarea");
+        const fields = quizForm.querySelectorAll("input, textarea");
         let allFilled = true;
 
-        textareas.forEach((ta) => {
-            if (ta.value.trim() === "") {
-                allFilled = false;
-            }
+        fields.forEach(f => {
+            if (f.value.trim() === "") allFilled = false;
         });
 
         if (!allFilled) {
-            alert("Please answer all questions before submitting.");
+            alert("Please fill all fields before submitting.");
             return false;
         }
-        
+
         const formData = new FormData(quizForm);
+
         fetch(quizForm.action, {
             method: "POST",
             body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
+            headers: { 'Accept': 'application/json' }
         }).then(response => {
             if (response.ok) {
-                // Success → redirect to thank you page
                 window.location.href = "thankyou.html";
             } else {
                 alert("Oops! There was a problem submitting your form.");
@@ -36,5 +32,13 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Oops! There was a problem submitting your form.");
             console.error(error);
         });
+    });
+
+    const progressBar = document.getElementById("progressBar");
+    window.addEventListener("scroll", function() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + "%";
     });
 });

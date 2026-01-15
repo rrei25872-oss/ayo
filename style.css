@@ -256,3 +256,36 @@ footer {
 .comment strong {
     color: #38bdf8;
 }
+
+.comment small {
+    display: block;
+    color: #cbd5f5;
+    margin-bottom: 6px;
+}
+
+.reply {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+}
+
+.reply-form {
+    margin-top: 10px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.reply-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    color: #38bdf8;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}

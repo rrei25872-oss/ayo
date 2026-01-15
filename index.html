@@ -11,12 +11,12 @@
 <div id="progressBar"></div>
 
 <header class="navbar">
-    <div class="logo">🛡 Anti-Scam Awareness</div>
+    <div class="logo">🛡 Anti Scam Awareness</div>
     <nav>
         <a href="#about">About</a>
         <a href="#types">Scams</a>
         <a href="#prevention">Prevention</a>
-        <a href="#questions">Questions</a>
+        <a href="#comments">Comments</a>
         <a href="#resources">Resources</a>
     </nav>
 </header>
@@ -56,7 +56,7 @@
         <a href="https://consumer.ftc.gov/all-scams/phishing-scams" target="_blank" class="card link-card">
             <img src="fish.png" class="card-img">
             <h3>Phishing Scams</h3>
-            <p>How to recognize and avoid phishing messages. 0</p>
+            <p>How to recognize and avoid phishing messages.</p>
         </a>
 
         <a href="https://consumer.ftc.gov/articles/online-shopping-scams" target="_blank" class="card link-card">
@@ -68,7 +68,7 @@
         <a href="https://consumer.ftc.gov/all-scams/prize-grant-scams" target="_blank" class="card link-card">
             <img src="give.jpeg" class="card-img">
             <h3>Prize & Giveaway Scams</h3>
-            <p>Real explanation of fake prize and sweepstakes scams. 1</p>
+            <p>Explanation of fake prize and sweepstakes scams.</p>
         </a>
     </div>
 </section>
@@ -80,29 +80,27 @@
         <a href="https://consumer.ftc.gov/all-scams/prize-grant-scams" target="_blank" class="card link-card">
             <img src="bew.jpg" class="card-img">
             <h3>Warning Signs</h3>
-            <p>Signs that something is likely a scam, like payment demands or urgency. 2</p>
+            <p>Signs that something is likely a scam.</p>
         </a>
 
         <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online" target="_blank" class="card link-card">
             <img src="sa.jpeg" class="card-img">
             <h3>Safe Online Habits</h3>
-            <p>Best practices for staying safe online from a national cybersecurity authority.</p>
+            <p>Best practices for staying safe online.</p>
         </a>
     </div>
 </section>
 
-<section id="questions" class="content-section alt">
-    <h2>Have a Question?</h2>
-    <p class="section-desc">
-        If you’re unsure about a suspicious message or link you received, send it here and we’ll help you understand.
-    </p>
+<section id="comments" class="content-section alt">
+    <h2>Comments</h2>
 
-    <form class="card question-card" action="https://formspree.io/f/mnjjqywz" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Type your question here..." required></textarea>
-        <button type="submit" class="btn">Send Question</button>
+    <form id="commentForm" class="question-card">
+        <input name="name" placeholder="Your name" required>
+        <textarea name="comment" rows="4" placeholder="Write a comment..." required></textarea>
+        <button class="btn" type="submit">Post Comment</button>
     </form>
+
+    <div id="commentList"></div>
 </section>
 
 <section id="resources" class="content-section">
@@ -111,23 +109,23 @@
     <div class="grid">
         <a href="https://consumer.ftc.gov/scams" target="_blank" class="card link-card">
             <h3>FTC Scam Alerts</h3>
-            <p>Official scam alerts and reports from the U.S. government. 3</p>
+            <p>Official scam alerts and reports.</p>
         </a>
 
         <a href="https://www.actionfraud.police.uk/" target="_blank" class="card link-card">
             <h3>Action Fraud</h3>
-            <p>UK national fraud & cybercrime reporting center.</p>
+            <p>UK national fraud reporting center.</p>
         </a>
 
         <a href="https://www.scamwatch.gov.au" target="_blank" class="card link-card">
             <h3>Scamwatch</h3>
-            <p>Australian government scam awareness & reports.</p>
+            <p>Australian government scam awareness.</p>
         </a>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Anti-Scam Awareness | Stay Alert, Stay Safe</p>
+    <p>©Anti Scam Awareness | Stay Alert, Stay Safe</p>
 </footer>
 
 <script src="script.js"></script>

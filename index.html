@@ -3,378 +3,439 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Monthsary ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#100909">
+<title>FOR MY GL</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#ffd6e8,#fff5f8,#ffe9f2);
-    overflow-x:hidden;
-    color:#444;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #100909;
+  color: #fff;
+  font-family: Georgia, serif;
+  text-align: center;
 }
 
-/* Floating Hearts & Flowers */
-
-.floating{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:0;
+header {
+  padding: 25px 15px 10px;
 }
 
-.floating span{
-    position:absolute;
-    bottom:-80px;
-    font-size:28px;
-    animation:float 14s linear infinite;
-    opacity:.85;
+header h1 {
+  color: #e9b7b7;
+  letter-spacing: 5px;
+  font-size: clamp(25px, 6vw, 38px);
+  margin-bottom: 10px;
 }
 
-.floating span:nth-child(1){left:5%;animation-delay:0s;}
-.floating span:nth-child(2){left:15%;animation-delay:2s;}
-.floating span:nth-child(3){left:28%;animation-delay:5s;}
-.floating span:nth-child(4){left:42%;animation-delay:1s;}
-.floating span:nth-child(5){left:58%;animation-delay:7s;}
-.floating span:nth-child(6){left:73%;animation-delay:3s;}
-.floating span:nth-child(7){left:88%;animation-delay:6s;}
-.floating span:nth-child(8){left:95%;animation-delay:9s;}
-
-@keyframes float{
-    0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:0;
-    }
-    20%{
-        opacity:1;
-    }
-    100%{
-        transform:translateY(-120vh) rotate(360deg);
-        opacity:0;
-    }
+header p,
+.hint {
+  color: #bda5a5;
+  font-style: italic;
+  font-size: 14px;
 }
 
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:30px;
-    position:relative;
-    z-index:2;
+.slide {
+  display: none;
+  max-width: 700px;
+  min-height: 420px;
+  margin: 15px auto;
+  padding: 25px 20px;
+  animation: fadeIn .6s ease;
 }
 
-.card{
-    width:100%;
-    max-width:750px;
-    background:rgba(255,255,255,.88);
-    backdrop-filter:blur(12px);
-    border-radius:30px;
-    padding:45px;
-    text-align:center;
-    box-shadow:0 20px 60px rgba(255,105,180,.25);
-    animation:fadeIn 1.5s ease;
+.slide.active {
+  display: block;
 }
 
-h1{
-    font-family:'Great Vibes',cursive;
-    font-size:70px;
-    color:#ff4f87;
-    margin-bottom:15px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.subtitle{
-    font-size:18px;
-    color:#666;
-    line-height:1.8;
+h2 {
+  color: #e9b7b7;
+  font-size: 26px;
 }
 
-.small{
-    margin-top:15px;
-    color:#999;
-    font-size:14px;
+/* SLIDE 1: TEDDY, FLOWERS & CHOCOLATES */
+
+.cute-card {
+  position: relative;
+  overflow: hidden;
+  margin: 25px auto;
+  padding: 30px 15px;
+  border-radius: 25px;
+  border: 1px solid #c47782;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      #fff0f3 0 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      #f8d5dc 0 4px,
+      transparent 5px
+    ),
+    linear-gradient(
+      145deg,
+      #ffe8ed,
+      #f5cbd5,
+      #fff0e5
+    );
+  color: #71323c;
+  box-shadow: 0 8px 25px #0006;
 }
 
-button{
-    margin-top:35px;
-    background:#ff4f87;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:40px;
-    font-size:17px;
-    cursor:pointer;
-    transition:.3s;
+.cute-decor {
+  font-size: clamp(30px, 8vw, 48px);
+  letter-spacing: 8px;
+  line-height: 1.8;
+  animation: float 3s ease-in-out infinite;
 }
 
-button:hover{
-    transform:scale(1.05);
-    background:#ff2d70;
+.teddy {
+  font-size: clamp(95px, 25vw, 145px);
+  line-height: 1.4;
+  filter: drop-shadow(0 7px 5px #71323c22);
+  animation: float 3s ease-in-out infinite;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.cute-title {
+  color: #781f2c;
+  font-size: clamp(21px, 5vw, 28px);
+  margin: 10px 0;
 }
 
-/* Envelope */
-
-.envelope{
-    margin:45px auto 10px;
-    width:170px;
-    height:120px;
-    position:relative;
-    cursor:pointer;
-    transition:.4s;
+.cute-message {
+  color: #71323c;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 440px;
+  margin: 12px auto;
 }
 
-.envelope:hover{
-    transform:translateY(-8px);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
 }
 
-.base{
-    width:170px;
-    height:105px;
-    background:#ff87ad;
-    position:absolute;
-    bottom:0;
-    border-radius:0 0 12px 12px;
+/* SLIDE 2: MUSIC */
+
+.music-box {
+  background: #1d1012;
+  border: 1px solid #71323c;
+  border-radius: 18px;
+  margin: 30px auto;
+  padding: 25px 18px;
 }
 
-.flap{
-    position:absolute;
-    width:0;
-    height:0;
-    border-left:85px solid transparent;
-    border-right:85px solid transparent;
-    border-top:65px solid #ff5d92;
-    transform-origin:top;
-    transition:1s;
+.disc {
+  width: 125px;
+  height: 125px;
+  margin: 15px auto 25px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #e9b7b7 0 7%,
+    #781f2c 9% 23%,
+    #160d0e 25% 58%,
+    #a64a59 60% 64%,
+    #160d0e 66%
+  );
+  border: 3px solid #b77a82;
 }
 
-.envelope.open .flap{
-    transform:rotateX(180deg);
+.disc.playing {
+  animation: spin 4s linear infinite;
 }
 
-.letter{
-    position:absolute;
-    width:145px;
-    height:90px;
-    background:white;
-    left:12px;
-    bottom:10px;
-    border-radius:10px;
-    transition:1s;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.envelope.open .letter{
-    transform:translateY(-90px);
+audio {
+  display: block;
+  width: 100%;
+  margin: 15px auto;
 }
 
-/* Hidden Letter */
+/* SLIDE 3: FINAL MESSAGE */
 
-#message{
-    display:none;
-    margin-top:50px;
-    text-align:left;
-    animation:fadeIn 1s ease;
+.letter {
+  background: #f5e8e2;
+  color: #382125;
+  text-align: left;
+  padding: 25px 22px;
+  border-radius: 9px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  box-shadow: 0 8px 25px #0005;
 }
 
-#message h2{
-    color:#ff4f87;
-    margin-bottom:15px;
+.letter h3 {
+  text-align: center;
+  color: #781f2c;
+  margin-top: 0;
 }
 
-#message p{
-    line-height:2;
-    font-size:17px;
+.navigation {
+  padding: 15px 10px 30px;
 }
 
+button {
+  background: #781f2c;
+  color: white;
+  border: 1px solid #c47782;
+  border-radius: 25px;
+  padding: 12px 23px;
+  margin: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .2s ease,
+              transform .2s ease;
+}
+
+button:hover {
+  background: #a52b40;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+#pageNumber {
+  display: inline-block;
+  color: #c1aaaa;
+  font-size: 13px;
+  margin: 0 8px;
+}
+
+footer {
+  color: #816d6d;
+  font-size: 12px;
+  padding: 15px;
+}
+
+@media (max-width: 480px) {
+  .slide {
+    padding: 15px;
+    min-height: 350px;
+  }
+
+  .cute-card {
+    padding: 25px 12px;
+  }
+
+  .letter {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 11px 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="floating">
-<span>❤️</span>
-<span>🌸</span>
-<span>💕</span>
-<span>🌷</span>
-<span>💖</span>
-<span>🌹</span>
-<span>🩷</span>
-<span>🌺</span>
-</div>
+<header>
+  <h1>A SIMPLE MESSAGE FOR YOU MY GL ♡</h1>
+  <p>some thing i made only for youu po.</p>
+</header>
 
-<section class="hero">
+<!-- SLIDE 1: CUTE GIFT AND MOTIVATIONAL MESSAGE -->
 
-<div class="card">
+<section class="slide active" id="slide1">
+  <h2>♡</h2>
+  <p>Something sweet, just like you.</p>
 
-<h1>Happy Monthsary</h1>
+  <div class="cute-card">
 
-<p class="subtitle">
-Even though we're miles apart, we're still loving and trusting each other. We overcome all the problems and pagtatampo sa loob ng isang buwan. I'm super grateful na tumagal tayo, hoping na tayo padin and malakas padin tayo next month. Always praying na okay ka, safe ka, and sana nasa maayos ka na kalagayan.
-</p>
+    <div class="cute-decor">🌷 🌸 🌷</div>
 
-<p class="small">
-Made specially for my bebegirl mwehehe❤️
-</p>
+    <div class="teddy">🧸</div>
 
-<div class="envelope" onclick="openLetter()" id="env">
-<div class="flap"></div>
-<div class="base"></div>
-<div class="letter"></div>
-</div>
+    <div class="cute-title">
+      a little bear for you
+    </div>
 
-<button onclick="openLetter()">
-Open My Letter 💌
-</button>
+    <p class="cute-message">
+      sending you flowers, chocolates, and a little teddy bear
+      to make your day a little sweeter.
+    </p>
 
-<div id="message"><h2>To My Love, Jennica ❤️</h2>
+    <div class="cute-decor">🍫 🎀 🍫</div>
 
-<p>
-hi babyko, mwehehehehe. happy monthsarypo, baby. thank you always for choosing me, and thank you kasi nand'yan ka pa rin even though na minsan nasasaktan kita. i'm really sorry sa mga pagkakataon na nagiging dahilan ako ng pag-iyak at pag-ooverthink mo. thank you kasi hindi mo ako sinusukuan, kahit alam kong hindi naman naging madali lahat.
+    <div class="cute-title">
+      simple message for you my gl♡
+    </div>
 
-forever grateful ako na ikaw 'yung dumating sa buhay ko. ikaw 'yung taong nagbigay ng kulay sa buhay ko, at sobrang saya ko kasi ikaw ang nakilala ko. hindi ko man laging napapakita nang maayos, pero mahal na mahal kita, baby. i appreciate every little thing na ginagawa mo para sa'kin, kahit gaano pa kaliit 'yan.
+    <p class="cute-message">
+      hallooo jen, i just wanna remind you na i'm proud of you po. always take care of yourself and don't give up, okayyy? you deserve happiness and all the good things in life. anywaysss, may little message lang ako for you, so click mo naaa mwehehehe :))
+    </p>
 
-sorry po, babyy, if wala muna akong maibigay sa'yo right now. i'm really at zero talaga, baby, and nahihiya ako kasi gusto kitang i-spoil at mapasaya palagi. pero i promise, kapag nakagaan-gaan na ako or nagkaroon man ako ng kahit konting budget, ibibili talaga kita ng makeup na gusto mo, foods na gusto mo, at kung ano pa man ang magpapasaya sa'yo. deserve mo 'yon, baby, and i can't wait na maibigay ko rin sa'yo lahat ng gusto kong ibigay.
+  </div>
 
-i promise na i'll keep working on myself para mas maging better boyfriend para sa'yo. gusto kong iparamdam sa'yo araw-araw na ikaw lang ang gusto kong piliin, ngayon at sa mga susunod pang araw. wala akong ibang hihilingin kundi ang makasama ka, gumawa pa tayo ng maraming memories, at sabay nating abutin lahat ng pangarap natin.
-
-i love you so much, babyko. happy monthsary ulit sa'tin. thank you for staying, for loving me, and for believing in us. sana marami pa tayong monthsaries na ipagdiwang hhanggang sa maging tayo at mag sama sa isang bahay po, iloveyouumylovee<33.<br><br>
-
-<b>Bakla Mueh na Asawa</b>
-</p>
-
-</div>
-
-</div>
-
+  <p class="hint">
+    Always remember that you're doing better than you think. ♡
+  </p>
 </section>
 
-<section style="padding:70px 20px;text-align:center;">
+<!-- SLIDE 2: MUSIC -->
 
-<h2 style="color:#ff4f87;font-family:'Great Vibes',cursive;font-size:55px;">
-Our Memories 📸
-</h2>
+<section class="slide" id="slide2">
+  <h2>A little song before the final letter</h2>
 
-<p style="margin-bottom:30px;color:#777;">
-</p>
+  <div class="music-box">
 
-<div style="
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:18px;
-">
+    <div class="disc" id="disc"></div>
 
-<img src="1.jpg" style="width:220px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.15);">
-<img src="2.jpg" style="width:220px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.15);">
-<img src="3.jpg" style="width:220px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.15);">
-<img src="4.jpg" style="width:220px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.15);">
+    <h3>Our Little Soundtrack</h3>
 
+    <audio id="music" controls loop preload="metadata">
+      <source src="till.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+
+    <p class="hint">
+      Press play, then continue to the final letter
+    </p>
+
+  </div>
+</section>
+
+<!-- SLIDE 3: MESSAGE -->
+
+<section class="slide" id="slide3">
+  <h2>My final letter for you</h2>
+  <p>Read this at your own pace.</p>
+
+  <div class="letter">
+    <h3>FROM JEYM</h3>
+soooo hallooo jenn, mwehehehe. sorry for bothering you po, i just wanna send this message for you nadin po. first of all, i wanna say sorry ngapo pala. sorry for being a bad bf, i realize now na ang lala ko palang bf that time, and sorry din for not respecting you po. i know i made a lot of mistakes, and i'm really sorry po talaga sa lahat :< i don't want this message to be kinda dramatic ganern, perooo again, hallooo ulittttt.
+
+kamusta na you? okay kana ba? i hope you're doing okay na and nakaheal kana sa lahat ng mga nagawa ko. i genuinely hope na masaya kana ngayon and you're doing better na. pero btw, congrats!! ang galing mopo super sa badminton, mwehehehe. i'm really happy for you po, and i hope you continue doing what you love and achieving more things. sorry for saying something like "lack of discipline" ganern, nagkamali ako that time. instead na ayusin ko, mas lalo ko pang sinira, so sorryyy.
+
+looking back, narealize ko na ang dami ko palang pagkukulang sayo that time. there were things na dapat ginawa ko, and things na hindi ko dapat sinabi or ginawa in the first place. i know na hindi sapat yung sorry para maayos lahat ng mga nagawa ko, pero i still wanna acknowledge my mistakes and apologize for them. you didn't deserve to be treated that way, and i'm sorry na hindi ko naibigay sayo yung respect and understanding na deserve mo.
+
+i'm not saying all of this para maawa ka sakin or para may makuha akong something from you. i just want to say these things kasi i know na may mga pagkakamali akong kailangan kong panagutan. i'm still learning from everything that happened, and i hope na someday, maging better person din ako because of those mistakes. i know na i can't change what happened before, pero at least i can learn from it and make sure na hindi ko na ulitin yung mga bagay na nakasakit sa ibang tao.
+
+thank you din pala for the memories we shared, jenn. kahit hindi naging perfect yung relationship natin, i'm still thankful na naging part ka ng life ko. i learned a lot from you and from the things that happened between us. i'm sorry if there were times na instead na maging pahinga mo ako, naging dahilan pa ako ng stress and sakit ng ulo mo. you deserved better from me that time, and i wish na mas naging understanding and respectful ako sayo. don't worry po, hindi naman ako nagmessage para guluhin ka ulit or para pilitin kang makipag-usap sakin. i just wanted to check up on you and say the things na dapat sinabi ko nang maayos before. you don't have to reply naman po if you don't want to, okay lang talaga. i respect your peace and whatever you feel right now.
+
+anyways, ayun lang naman pooo. i hope life treats you well, and i hope na marami ka pang maachieve sa journey mopo. keep doing your best lang po, and don't forget to be proud of yourself sa mga achievements mo, kahit small things lang yan. i'm rooting for you from afar, and i genuinely wish you happiness and peace.
+
+again, i'm really sorry for everything, jenn. sorry sa mga pagkakamali ko, sa mga nasabi ko, and sa mga times na hindi kita naintindihan. i hope na someday, kapag naalala mo yung mga nangyari satin, hindi puro bad memories yung maalala mo. i'm not expecting anything from you po, i just hope na you're doing okay and that you're happy with where you are now.
+
+so ayun, hallooo and goodbye na rin sigurooo, mwehehehe. take care of yourself always, jenn, and goodluck sa lahat ng gagawin mo!! thank you for everything, and i'm sorry ulit sa lahat ng nagawa ko. i wish you nothing but the best pooo. ingat ka palagiii!! :))
+  </div>
+
+  <p class="hint">
+    anyways thank you somuch for taking the time to read this po ♡
+  </p>
+</section>
+
+<!-- NAVIGATION -->
+
+<div class="navigation">
+
+  <button id="prevBtn" type="button" hidden>
+    ← Previous
+  </button>
+
+  <span id="pageNumber">Slide 1 of 3</span>
+
+  <button id="nextBtn" type="button">
+    Next →
+  </button>
 
 </div>
 
-</section>
-
-<section style="padding:60px;text-align:center;">
-
-<h2 style="color:#ff4f87;font-family:'Great Vibes',cursive;font-size:50px;">
-</section>
-
-<section style="padding:70px 20px;text-align:center;">
-
-<h2 style="font-family:'Great Vibes';font-size:55px;color:#ff4f87;">
-One Last Thing...
-</h2>
-
-<p style="
-max-width:700px;
-margin:auto;
-line-height:2;
-font-size:18px;
-color:#666;
-">
-
-Distance can never measure how much I love you.
-every sunrise brings me one day closer to seeing you again.
-
-Until that day comes...
-
-please pleaseeee keep smiling,
-keep believing in us,
-and never forget that someone,
-somewhere,
-is loving you with all his heart.
-
-
-
-</p>
-
-</section>
+<footer>♡</footer>
 
 <script>
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const pageNumber = document.getElementById("pageNumber");
+const music = document.getElementById("music");
+const disc = document.getElementById("disc");
 
-function openLetter(){
+let currentSlide = 0;
 
-document.getElementById("env").classList.add("open");
+function showSlide(index) {
+  if (index < 0 || index >= slides.length) return;
 
-setTimeout(function(){
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
 
-document.getElementById("message").style.display="block";
+  currentSlide = index;
 
-document.getElementById("message").scrollIntoView({
-behavior:"smooth"
+  prevBtn.hidden = index === 0;
+  nextBtn.hidden = index === slides.length - 1;
+
+  pageNumber.textContent =
+    `Slide ${index + 1} of ${slides.length}`;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+nextBtn.addEventListener("click", () => {
+  showSlide(currentSlide + 1);
 });
 
-},800);
+prevBtn.addEventListener("click", () => {
+  showSlide(currentSlide - 1);
+});
 
-}
+music.addEventListener("play", () => {
+  disc.classList.add("playing");
+});
 
-// CHANGE THIS TO YOUR ANNIVERSARY DATE
-const startDate = new Date("2026-06-08");
+music.addEventListener("pause", () => {
+  disc.classList.remove("playing");
+});
 
-function updateTimer(){
+music.addEventListener("ended", () => {
+  disc.classList.remove("playing");
+});
 
-const now = new Date();
-
-let diff = now - startDate;
-
-let days = Math.floor(diff/1000/60/60/24);
-
-let months = Math.floor(days/30);
-
-days = days % 30;
-
-let hours = now.getHours();
-
-document.getElementById("timer").innerHTML =
-months + " Months ❤️ " + days + " Days ❤️ " + hours + " Hours";
-
-}
-
-updateTimer();
-
-setInterval(updateTimer,1000);
-
+showSlide(0);
 </script>
 
 </body>
